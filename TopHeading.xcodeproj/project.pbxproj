@@ -23,6 +23,8 @@
 		4CB71FD7251B7E4100DCEF79 /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB71FD6251B7E4100DCEF79 /* UIImageViewExtensions.swift */; };
 		4CB71FDA251B85A700DCEF79 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB71FD9251B85A700DCEF79 /* Utility.swift */; };
 		4CC62764251BAF5D00AC54FE /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC62763251BAF5D00AC54FE /* NewsModel.swift */; };
+		4CDCBBC32530D48A00EB4D8A /* LoadWebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDCBBC22530D48900EB4D8A /* LoadWebVC.swift */; };
+		4CDCBBC52530D4AE00EB4D8A /* NewsDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDCBBC42530D4AE00EB4D8A /* NewsDetailsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +49,8 @@
 		4CB71FD6251B7E4100DCEF79 /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
 		4CB71FD9251B85A700DCEF79 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		4CC62763251BAF5D00AC54FE /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
+		4CDCBBC22530D48900EB4D8A /* LoadWebVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadWebVC.swift; sourceTree = "<group>"; };
+		4CDCBBC42530D4AE00EB4D8A /* NewsDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailsVC.swift; sourceTree = "<group>"; };
 		F40309F5C40E46ACFB5FD18A /* Pods-NewsAppDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsAppDemo.debug.xcconfig"; path = "Target Support Files/Pods-NewsAppDemo/Pods-NewsAppDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -188,6 +192,8 @@
 			children = (
 				4C4CBA46251B535600B132BB /* TopNewVC.swift */,
 				4CB71FBC251B5B9400DCEF79 /* NewsCell.swift */,
+				4CDCBBC22530D48900EB4D8A /* LoadWebVC.swift */,
+				4CDCBBC42530D4AE00EB4D8A /* NewsDetailsVC.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -383,6 +389,7 @@
 			files = (
 				4CB71FD7251B7E4100DCEF79 /* UIImageViewExtensions.swift in Sources */,
 				4CB71FC7251B6E5000DCEF79 /* Articles.swift in Sources */,
+				4CDCBBC52530D4AE00EB4D8A /* NewsDetailsVC.swift in Sources */,
 				4CB71FD2251B740200DCEF79 /* AppConstant.swift in Sources */,
 				4CB71FDA251B85A700DCEF79 /* Utility.swift in Sources */,
 				4CB71FCC251B70C400DCEF79 /* APIManager.swift in Sources */,
@@ -392,6 +399,7 @@
 				4C4CBA43251B535600B132BB /* AppDelegate.swift in Sources */,
 				4CC62764251BAF5D00AC54FE /* NewsModel.swift in Sources */,
 				4CB71FCE251B71CF00DCEF79 /* Service.swift in Sources */,
+				4CDCBBC32530D48A00EB4D8A /* LoadWebVC.swift in Sources */,
 				4CB71FBD251B5B9400DCEF79 /* NewsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

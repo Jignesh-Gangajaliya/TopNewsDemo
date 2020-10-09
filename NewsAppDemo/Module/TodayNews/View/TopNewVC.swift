@@ -12,6 +12,8 @@ class TopNewVC: UIViewController {
     
     // MARK: - Private Properties
     private let viewModel = NewsViewModel()
+    private var newsLink: String?
+    private var selectedIndex: Int?
     
     // MARK: - View Controller Methods
     
@@ -44,7 +46,19 @@ class TopNewVC: UIViewController {
     
     /// Present View for load webview
     private func loadWebView(link: String?) {
-        
+        newsLink = link
+        performSegue(withIdentifier: Segue.moveToViewNews, sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let aObjVC = segue.destination as? LoadWebVC {
+            aObjVC.webLink = newsLink
+        }
+        if let aObjVC = segue.destination as? NewsDetailsVC {
+            if let index = selectedIndex {
+                aObjVC.articlesDetailsModel = viewModel.topHeadlines?[index]
+            }
+        }
     }
 }
 
@@ -66,5 +80,10 @@ extension TopNewVC: UITableViewDelegate, UITableViewDataSource {
             }
         }
         return cell ?? UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedIndex = indexPath.row
+        performSegue(withIdentifier: Segue.moveToNewsDetails, sender: nil)
     }
 }
