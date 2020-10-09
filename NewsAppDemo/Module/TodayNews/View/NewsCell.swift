@@ -31,7 +31,11 @@ class NewsCell: UITableViewCell {
         newsImage.isUserInteractionEnabled = true
         lblTitle.text = (data.title ?? "") == "" ? "N/A" : data.title
         lblAuther.text = (data.author ?? "") == "" ? "N/A" : data.author
-        lblDateTime.text = data.publishedAt
+        if let date = data.publishedAt {
+            lblDateTime.text = Utility.changeCustomDateFormate(date, fromFormate: AppDateFormatters.backendFormatter, toFormate: AppDateFormatters.newsDate)
+        } else {
+            lblDateTime.text = "N/A"
+        }
         newsImage.setImageUsingKF(string: data.urlToImage)
         tapGestureRecognizer.addTarget(self, action: #selector(imageTapped(gestureRecgonizer:)))
         self.newsImage.addGestureRecognizer(tapGestureRecognizer)
